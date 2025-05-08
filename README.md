@@ -38,5 +38,5 @@ The data was cleaned and reshaped to make it analysis-ready:
 This project was completed as part of an academic data analysis assignment (2024–2025).  
 All charts, forecasts, and interpretations were created using publicly available U.S. government data.
 
-## License
+## Source
 Data sourced from [U.S. Census Bureau](https://www.census.gov/retail/index.html).
