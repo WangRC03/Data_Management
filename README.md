@@ -29,6 +29,7 @@ The data was cleaned and reshaped to make it analysis-ready:
 5. **Adaptability**:Monitor consumer behavior and be ready to pivot based on trends.
 
 ## Tools & Libraries
+- Hive
 - Python (Pandas,Matplotlib,Seaborn)
 - Statsmodels (for time series forecasting)
 - Google Colab
