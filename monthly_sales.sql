@@ -17,7 +17,8 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE;
 
 -- 加载数据
-LOAD DATA INPATH '/user/maria_dev/ml-100k/mrtssales92present25.csv' INTO TABLE retail_sales;
+INSERT INTO retail_sales
+SELECT * FROM default.mrtssales92present25;
 
 -- 1. 每月总销售额
 SELECT year, month, SUM(sales) AS total_sales
@@ -55,7 +56,7 @@ INSERT OVERWRITE DIRECTORY '/user/maria_dev/hive_output_2023_2024_monthly_sales'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 SELECT year, month, SUM(sales) AS total_sales
-FROM retail_sales_2023_2024
+FROM retail_sales
 GROUP BY year, month;
 
 -- 导出年度销售增长数据
@@ -63,14 +64,14 @@ INSERT OVERWRITE DIRECTORY '/user/maria_dev/hive_output_2023_2024_yearly_growth'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 SELECT year, total_sales, last_year_sales, growth_rate
-FROM retail_sales_2023_2024_yearly_growth;
+FROM retail_sales;
 
 -- 导出按类别和年度销售数据
 INSERT OVERWRITE DIRECTORY '/user/maria_dev/hive_output_2023_2024_category_year'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 SELECT category, year, SUM(sales) AS total_sales
-FROM retail_sales_2023_2024
+FROM retail_sales
 GROUP BY category, year;
 
 -- 导出前 10 销售类别
@@ -78,7 +79,7 @@ INSERT OVERWRITE DIRECTORY '/user/maria_dev/hive_output_2023_2024_top_categories
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 SELECT category, SUM(sales) AS total_sales
-FROM retail_sales_2023_2024
+FROM retail_sales
 GROUP BY category
 ORDER BY total_sales DESC
 LIMIT 10;
