@@ -17,7 +17,7 @@ FIELDS TERMINATED BY ','
 STORED AS TEXTFILE;
 
 -- 加载数据
-LOAD DATA INPATH '/user/maria_dev/ml-100k/mrtssales92-present25.csv' INTO TABLE retail_sales;
+LOAD DATA INPATH '/user/maria_dev/ml-100k/mrtssales92present25.csv' INTO TABLE retail_sales;
 
 -- 1. 每月总销售额
 SELECT year, month, SUM(sales) AS total_sales
