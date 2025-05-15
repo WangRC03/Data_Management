@@ -32,7 +32,7 @@ The data was cleaned and reshaped to make it analysis-ready:
 - Python (Pandas,Matplotlib,Seaborn)
 - Statsmodels (for time series forecasting)
 - Google Colab
-- - Hive
+- Hive
 
 ## Author
 **WANG RONGCHENG**  
