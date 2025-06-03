@@ -1,4 +1,6 @@
 # U.S. Retail and Food Services Sales Analysis (2023–2025)
+![](assets/A_flat-style_digital_illustration_in_the_image_ser.png)
+
 This project provides a detailed analysis of monthly U.S. retail and food services sales for the years 2023 and 2024, along with a forecast for 2025.Using open data from the U.S. Census Bureau,this notebook explores sales trends, seasonal patterns,and growth in key retail segments.The goal is to support data-driven decision-making in the retail industry.
 
 ## Project Objectives
