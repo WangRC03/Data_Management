@@ -36,7 +36,7 @@ The data was cleaned and reshaped to make it analysis-ready:
 - Hive
 
 ## Author
-**WANG RONGCHENG**  
+**P150280 WANG RONGCHENG**  
 This project was completed as part of an academic data analysis assignment (2024–2025).  
 All charts, forecasts, and interpretations were created using publicly available U.S. government data.
 
